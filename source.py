@@ -1,10 +1,14 @@
 #Codigo Chido para el pia osi osi 
 
-class Empleado():
+class empleado():
     def __init__(self,idEmpleado,Nombre,Direccion):
         self.idEmpleado= idEmpleado
         self.Nombre= Nombre
         self.Direccion= Direccion
+
+        
+    def mostrar_datos(self,idEmpleado,Nombre,Direccion):
+        print(idEmpleado,Nombre,Direccion)
 
 
 
@@ -26,8 +30,10 @@ while loop == True:
     if accion == 2:
         opcion = int(input("Dime que deseas hacer en este archivo:\n Agregar= 1:\n Borrar=2:\n Modificar=3:\n Consultar todo=4:\n Ver detalles de algun empleado=5:\n"))
         if opcion == 1:
-            nuevoempleado=Empleado
-            input("Dame el id del empleado"(nuevoempleado.idEmpleado))
+            nuevoempleado=empleado
+            nuevoempleado(int(input("Dame el id")),input("Dame el nombre"),input("Dame la direccion"))
+             
+
 
 
 
