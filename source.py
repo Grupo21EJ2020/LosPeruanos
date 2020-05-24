@@ -32,6 +32,11 @@ while loop == True:
         if opcion == 1:
             nuevoempleado=empleado
             nuevoempleado(int(input("Dame el id")),input("Dame el nombre"),input("Dame la direccion"))
+
+            #Agregar al archivo empleado.txt
+            archivo= open("./LosPeruanos/empleados.txt","a",encoding="utf8")
+            archivo.write(idEmpleado,"!",Nombre,Direccion)
+            archivo.close
              
 
 
