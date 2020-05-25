@@ -9,6 +9,13 @@ class empleado():
         
     def mostrar_datos(self,idEmpleado,Nombre,Direccion):
         print(idEmpleado,Nombre,Direccion)
+class Curso():
+    def __init__(self,idCurso,descripcion,idEmpleado):
+        self.idCurso = idCurso
+        self.descripcion = descripcion
+        self.idEmpleado = idEmpleado
+
+    
 
 
 
