@@ -1,7 +1,7 @@
 #Codigo Chido para el pia osi osi 
 
 class empleado():
-    def __init__(self,idEmpleado,Nombre,Direccion):
+    def __init__(self,idEmpleado,nombre,direccion):
         self.idEmpleado= idEmpleado
         self.Nombre= Nombre
         self.Direccion= Direccion
@@ -91,13 +91,29 @@ while loop == True:
     if accion == 2:
         opcion = int(input("Dime que deseas hacer en este archivo:\n Agregar= 1:\n Borrar=2:\n Modificar=3:\n Consultar todo=4:\n Ver detalles de algun empleado=5:\n"))
         if opcion == 1:
-            nuevoempleado=empleado
-            nuevoempleado(int(input("Dame el id")),input("Dame el nombre"),input("Dame la direccion"))
+           #AGREGAR EMPLEADO OSI OSI
+           archivo = open("./archivos/empleados.txt","a",encoding='utf8')
+             idEmpleado = int(input("Dame el id del empleado crack: \n"))  
+             nombre = input("Dame el nombre: \n")   
+             direccion = int(input("Dame la direccion del empleado: \n"))
+         
+             archivo.write( str(idEmpleado) + '!' + nombre + '!' + str(direccion))
+             archivo.write("\n")
+             
 
-            #Agregar al archivo empleado.txt
-            archivo= open("./LosPeruanos/empleados.txt","a",encoding="utf8")
-            archivo.write(idEmpleado,"!",Nombre,Direccion)
-            archivo.close
+        
+            
+             archivo.close
+        if opcion ==2:
+            #BORRAR DATOS DE EMPLEADOS UWU
+            listaborrado=[]
+            borrado=input("Dime que dato deseas borrar de este archivo: \n")
+            archivoread= open("./archivos/empleados.txt",encoding='utf8')
+            print(archivoread.read())
+            archivoread.close()
+
+
+
              
 
 
