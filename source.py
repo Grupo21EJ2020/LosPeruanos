@@ -85,7 +85,14 @@ while loop == True:
              archivo.close
         if opcion ==2:
             #BORRAR DATOS DE EMPLEADOS UWU
-            
+            listaborrado=[]
+            borrado=input("Dime que dato deseas borrar de este archivo: \n")
+            archivoread= open("./archivos/empleados.txt",encoding='utf8')
+            print(archivoread.read())
+            archivoread.close()
+
+
+
              
 
 
