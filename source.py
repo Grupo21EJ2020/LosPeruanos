@@ -11,9 +11,14 @@ class empleado():
         print(idEmpleado,Nombre,Direccion)
 class Curso():
     def __init__(self,idCurso,descripcion,idEmpleado):
-        self.idCurso = idCurso
-        self.descripcion = descripcion
-        self.idEmpleado = idEmpleado
+        self.__idCurso = idCurso
+        self.__descripcion = descripcion
+        self.__idEmpleado = idEmpleado
+    
+    @property
+    
+
+
 
    
 
@@ -45,14 +50,30 @@ while loop == True:
              descripcion = input("nombre de curso: \n")   
              idEmpleado = int(input("Id de empleado: \n"))
          
-             archivo.write( str(idCurso) + '!' + descripcion + '!' + str(idEmpleado))
+             archivo.write( str(idCurso) + '|' + descripcion + '|' + str(idEmpleado))
              archivo.write("\n")
              
 
         
-            
+    
              archivo.close
-         
+         if opcion == 2:
+             archivo = open("./archivos/curso.txt")
+             id =input(input("Que curso desea eliminar: \n")
+             Lista = []
+             for line in archivo:
+                 linea = line.split('|')
+                 idCurso = linea[0]
+                 descripcion = linea[1]
+                 idEmpleado = linea[2]
+                 if idCurso != id:
+                     Lista = Lista + line
+             archivo.close
+             archivo = open("./archivos/curso.txt","w",encoding='utf8')  
+             archivo.write(Lista)
+             archivo.close
+             
+
 
              
         
