@@ -83,6 +83,9 @@ while loop == True:
         
             
              archivo.close
+        if opcion ==2:
+            #BORRAR DATOS DE EMPLEADOS UWU
+            
              
 
 
