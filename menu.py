@@ -173,6 +173,7 @@ while loop == True:
             f = open("./archivos/curso_tema.txt")
             print(f.read())
             f.close()
+            
 
 
 

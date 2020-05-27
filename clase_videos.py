@@ -4,7 +4,7 @@ class Video():
         self.__idvideo = idvideo
         self.__nombre = nombre
         self.__url = url
-        self.__fecha_publicacion
+        self.__fecha_publicacion = fecha_publicacion
 
     #Propiedades 
     @property
@@ -30,7 +30,7 @@ class Video():
     @url.setter
     def url(self,url):
         self.__url = url
-    @fecha_publicacion
+    @fecha_publicacion.setter
     def fecha_publicacion(self,fecha_publicacion):
         self.__fecha_publicacion = fecha_publicacion
     
