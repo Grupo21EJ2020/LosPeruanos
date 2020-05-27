@@ -11,7 +11,7 @@ class empleado():
         return self.__nombre
     @property 
     def direccion():
-        return self.
+        return self.__direccion
         
     @idempleado.setter
     def idempleado(self):
