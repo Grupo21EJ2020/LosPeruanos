@@ -207,3 +207,9 @@ if accion == 4:
              nombre = input("Elija el nombre del tema a modificar:\n")
              mod = Tema(idtema,nombre)
              mod.Modificar
+         
+         if opcion == 4:
+             print("Esta es toda la informacion en el archivo\n")
+             f = open("./archivos/tema.txt")
+             print(f.read())
+             f.close()
