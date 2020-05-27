@@ -81,17 +81,20 @@ while loop == True:
             archivo.close
         if opcion ==2:
             #BORRAR DATOS DE EMPLEADOS UWU
-            listaborrado=[]
-            listamuestra=[]
-            archivoread= open("./archivos/empleados.txt",encoding='utf8')
-            print(archivoread.read())
-            for dato in archivoread:
-                listamuestra.append()
-            print(listamuestra)
-            borrado=input("Dime que dato deseas borrar de este archivo: \n")
-            if x in listamuestra:
-                listaborrado.append()  
-            archivoread.close()
+            print("Estos son los empleados que han sido registrados")
+            archivochido=open("./archivos/empleados.txt")
+            print(archivochido.read())
+            archivochido.close()
+            #
+
+            idempleado = input("Dame el id del empleado a borrar:\n")
+            nombre= input("Dame el nombre del empleado a borrar:\n")
+            direccion= input("Dame la direccion del empleado a borrar:\n")
+            borrado= empleado(idempleado,nombre,direccion)
+            borrar.borrarInfo()
+
+           
+            
 
 
         if opcion == 3:
@@ -123,7 +126,7 @@ while loop == True:
             linea = int(input("Escribe la linea que deseas ver"))
             f = open("./archivos/empleados.txt")
             linea = f.readline()
-            2print(linea)
+            print(linea)
             f.close()
 
         

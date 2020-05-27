@@ -68,5 +68,18 @@ class empleado():
          f =open("./archivos/empleados.txt","w")  
          f.write(cam)  
          f.close()
+    
+     def borrarInfo (self):
+        archivo = open("./archivos/empleados.txt","r",encoding ='utf8')
+        lista = []
+        for x in archivo:
+            datos = x.split("\n")
+            if datos[0] != (self.__idempleado + "|" + self.__nombre + "|" + self.__direccion):
+                lista.append(datos[0])
+                archivo2 = open("./archivos/empleados.txt","w",encoding = "utf8")
+                for i in lista:
+                    archivo2.write(i + "\n")
+                archivo2.close()
+        archivo.close()
 
             
