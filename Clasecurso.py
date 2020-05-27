@@ -67,7 +67,8 @@ class Curso():
          f =open("./archivos/curso.txt","w")  
          f.write(cam)  
          f.close()
-
+    
+        
 
          
 
