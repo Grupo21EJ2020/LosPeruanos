@@ -38,3 +38,26 @@ class Tema():
                     archivo_tema_2.write(i + "\n")
                     archivo_tema_2.close()
         archivo_tema.close()
+    
+    def Modificar(self):
+         f = open("./archivos/tema.txt")
+         
+         cam = []
+         for line in f:
+             linea = line.split("|")
+             self.__idtema = linea[0]
+             self.__nombre = linea[1]
+             if self.__idtema != self.__idtema:
+                 cam += line
+         f.close()
+         for renglon in cam:
+            datos = renglon.split("|")
+            if datos[0] == (self.__idtema,):
+                self.__idtema = int(input("ingrese el idtema modificado"))
+                self.__nombre = input("ingrese el nombre  modicado")
+                datosNuevos = datos[1].replace(datos[1], self.__nombre)
+                datosCambiados = (datos[0] + "|" + datosNuevos)
+                cam.append(datosCambiados)
+         f =open("./archivos/tema.txt","w")  
+         f.write(cam)  
+         f.close()
