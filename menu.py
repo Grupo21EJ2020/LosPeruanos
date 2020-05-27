@@ -1,5 +1,6 @@
 #Menu Chido para el pia osi osi 
 from Clasecurso import Curso
+from Claseempleado import empleado
 
 print("»"*60)
 
@@ -61,6 +62,81 @@ while loop == True:
 
              
          
+
+
+
+#EMPLEADOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOS
+    if accion == 2:
+        opcion = int(input("Dime que deseas hacer en este archivo:\n Agregar= 1:\n Borrar=2:\n Modificar=3:\n Consultar todo=4:\n Ver detalles de algun empleado=5:\n"))
+        if opcion == 1:
+
+
+           #AGREGAR EMPLEADO OSI OSI
+            archivo = open("./archivos/empleados.txt","a",encoding='utf8')
+            idEmpleado = int(input("Dame el id del empleado crack: \n"))  
+            nombre = input("Dame el nombre: \n")   
+            direccion = (input("Dame la direccion del empleado: \n"))
+         
+            archivo.write( str(idEmpleado) + '!' + nombre + '!' + str(direccion))
+            archivo.write("\n")
+             
+
+        
+            
+            archivo.close
+        if opcion ==2:
+            #BORRAR DATOS DE EMPLEADOS UWU
+            print("Estos son los empleados que han sido registrados")
+            archivochido=open("./archivos/empleados.txt")
+            print(archivochido.read())
+            archivochido.close()
+            #
+
+            idempleado = input("Dame el id del empleado a borrar:\n")
+            nombre= input("Dame el nombre del empleado a borrar:\n")
+            direccion= input("Dame la direccion del empleado a borrar:\n")
+            borrado= empleado(idempleado,nombre,direccion)
+            borrado.borrarInfo()
+
+           
+            
+
+
+        if opcion == 3:
+             
+             f = open("./archivos/empleados.txt")
+             print(archivo.read())
+             f.close()
+             idempleado = int(input("Elija el idempleado a modificar:\n"))
+             nombre = input("Elija el nombre a modificar:\n")
+             direccion = (input("Elija la direccion a modificar:\n"))
+             mod = Curso(idempleado,nombre,direccion)
+             mod.Modificar
+
+
+
+        if opcion == 4:
+            print("Esta es toda la informacion en el archivo de empleados\n")
+            f = open("./archivos/empleados.txt")
+            print(f.read())
+            f.close()
+
+
+
+        if opcion == 5:
+            print("Esta es toda la informacion en el archivo de empleados\n")
+            f = open("./archivos/empleados.txt")
+            print(f.read())
+            f.close()
+            linea = int(input("Escribe la linea que deseas ver"))
+            f = open("./archivos/empleados.txt")
+            linea = f.readline()
+            print(linea)
+            f.close()
+
+        
+
+
 
 
 
