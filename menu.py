@@ -108,6 +108,7 @@ while loop == True:
 
 
          if opcion == 4:
+             
              print("Esta es toda la informacion en el archivo\n")
              f = open("./archivos/empleados.txt")
              print(f.read())
