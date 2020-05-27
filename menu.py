@@ -136,6 +136,18 @@ while loop == True:
         if opcion == 6:
             pass
     
+#---Opcion 3 del MENU (VIDEO)---
+    if accion == 3:
+         opcion = int(input("Dime que deseas hacer en este archivo:\n Agregar= 1:\n Borrar=2:\n Modificar=3:\n Consultar todo=4:\n Ver detalles de algun video=5:\n"))
+         
+        if opcion == 1:
+            idvideo = int(input("id del video: \n"))  
+            nombre = input("nombre del video: \n")   
+            url = input("url del video: \n")
+            fecha_publicacion = input("fecha de publicacion: \n")
+            add = Video(idvideo,nombre,url,fecha_publicacion)
+            add.Agregar()
+            print("Se han agrgado la informacion")
 
 #---Opcion 4 del MENU (TEMA)---
     if accion == 4:
