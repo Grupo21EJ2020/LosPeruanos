@@ -69,8 +69,10 @@ class empleado():
          f.write(cam)  
          f.close()
     
-     def borrarInfo (self):
+    def borrarInfo (self):
+
         archivo = open("./archivos/empleados.txt","r",encoding ='utf8')
+
         lista = []
         for x in archivo:
             datos = x.split("\n")
@@ -79,7 +81,8 @@ class empleado():
                 archivo2 = open("./archivos/empleados.txt","w",encoding = "utf8")
                 for i in lista:
                     archivo2.write(i + "\n")
-                archivo2.close()
+                    archivo2.close()
         archivo.close()
 
             
+

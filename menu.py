@@ -91,7 +91,7 @@ while loop == True:
             nombre= input("Dame el nombre del empleado a borrar:\n")
             direccion= input("Dame la direccion del empleado a borrar:\n")
             borrado= empleado(idempleado,nombre,direccion)
-            borrar.borrarInfo()
+            borrado.borrarInfo()
 
            
             
