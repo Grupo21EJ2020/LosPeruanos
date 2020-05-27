@@ -160,7 +160,17 @@ while loop == True:
             fecha_publicacion = input("¿Cual es la fecha que quiere eliminar?")
             print("se ha eliminado el video ")
             delete = Video(idvideo,nombre,url,fecha_publicacion)
-            delete.Eliminar
+            delete.Eliminar  
+        
+        if opcion == 3:
+            f = open("./archivos/videos.txt")
+            print(archivo_videos.read())
+            f.close()
+            idvideo = int(input("Elija el video a modificar:\n"))
+            nombre = input("Elija el nombre del video a modificar:\n")
+            url = input("Elija el url a modificar:\n")
+            mod = Video(idvideo,nombre,url,fecha_publicacion)
+            mod.Modificar
 
 #---Opcion 4 del MENU (TEMA)---
     if accion == 4:
