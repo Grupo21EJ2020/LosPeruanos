@@ -139,7 +139,7 @@ while loop == True:
 
 #---Opcion 4 del MENU (TEMA)---
     if accion == 4:
-        opcion = int(input("Dime que deseas hacer en este archivo:\n Agregar= 1:\n Borrar=2:\n Modificar=3:\n Consultar todo=4:\n Ver detalles de algun curso=5:\n"))
+        opcion = int(input("Dime que deseas hacer en este archivo:\n Agregar= 1:\n Borrar=2:\n Modificar=3:\n Consultar todo=4:\n Ver detalles de algun tema =5:\n"))
         if opcion == 1:
             idtema = int(input("id del tema: \n"))  
             nombre = input("nombre del tema: \n")   
