@@ -171,6 +171,12 @@ while loop == True:
             url = input("Elija el url a modificar:\n")
             mod = Video(idvideo,nombre,url,fecha_publicacion)
             mod.Modificar
+         
+        if opcion == 4:
+            print("Esta es toda la informacion en el archivo\n")
+            f = open("./archivos/videos.txt")
+            print(f.read())
+            f.close()
 
 #---Opcion 4 del MENU (TEMA)---
     if accion == 4:
