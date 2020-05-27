@@ -11,13 +11,23 @@ class Curso():
         return self.__descripcion
     @property
     def idempleado(self):
-        return self.__idempleado   
+        return self.__idempleado  
+    @idcurso.setter
+    def idcurso(self):
+        self.__idcurso = valor
+    @descripcion.setter 
+    def descripcion(self):
+        self.__descripcion = valor
+    @idempleado.setter   
+    def idempleado(self):
+        self.__idempleado = valor
+
     def Agregar(self):
         archivo = open("./archivos/curso.txt","a",encoding='utf8')
         archivo.write( str(self.__idcurso) + '|' + self.__descripcion + '|' + str(self.__idempleado))
         archivo.write("\n")    
         archivo.close()
-    def Eliminar(self):
+    def Eliminar(self,idcurso):
         f = open("./archivos/curso.txt")
         Lista = []
         for line in f:
