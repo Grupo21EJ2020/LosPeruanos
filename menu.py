@@ -187,3 +187,14 @@ if accion == 4:
              add = Tema(idtema,nombre)
              add.Agregar()
              print("Se han agregado")
+         
+         if opcion == 2:    
+             archivo_tema = open("./archivos/tema.txt")
+             print(archivo_tema.read())
+             
+             archivo_tema.close()
+             idtema = int(input("Elija el id del tema a eliminar:\n"))
+             nombre = input("Elija el nombre del tema a eliminar:\n")
+             print("Eliminacion confirmada ")
+             delete = Tema(idtema,nombre)
+             delete.Eliminar
