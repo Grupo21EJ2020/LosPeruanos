@@ -64,21 +64,17 @@ while loop == True:
     if accion == 2:
         opcion = int(input("Dime que deseas hacer en este archivo:\n Agregar= 1:\n Borrar=2:\n Modificar=3:\n Consultar todo=4:\n Ver detalles de algun empleado=5:\n Salir=6:\n"))
         if opcion == 1:
-
-
-           #AGREGAR EMPLEADO OSI OSI
-            archivo = open("./archivos/empleados.txt","a",encoding='utf8')
-            idEmpleado = int(input("Dame el id del empleado crack: \n"))  
-            nombre = input("Dame el nombre: \n")   
-            direccion = (input("Dame la direccion del empleado: \n"))
-         
-            archivo.write( str(idEmpleado) + '!' + nombre + '!' + str(direccion))
-            archivo.write("\n")
+             idempleado = int(input("Dame el id del empleado a agregar: \n"))  
+             nombre = input("Dame el nombre del empleado: \n")   
+             direccion = (input("Dame la direccion: \n"))
+             add = empleado(idempleado,nombre,direccion)
+             add.Agregar()
+             print("Se han agrgado")
              
 
         
             
-            archivo.close
+            
         if opcion ==2:
             #BORRAR DATOS DE EMPLEADOS UWU
             print("Estos son los empleados que han sido registrados")
@@ -128,57 +124,5 @@ while loop == True:
             linea = f.readline()
             print(linea)
             f.close()
-        else:
-
-
-        
-
-
-
-
-
-
-             
-             
-             
-
-
-
-
-
-
-
-             
-             
-
-        
-    
-             
-         
-        
-             
-
-
-             
-        
-
-             
-             
-              
-
-
-
-             
-
-
-
-
-
-
-
-
-
-
-
-
-    
+        if opcion == 6:
+            pass
