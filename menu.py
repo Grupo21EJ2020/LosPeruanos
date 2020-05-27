@@ -45,6 +45,26 @@ while loop == True:
              f = open("./archivos/curso.txt")
              print(f.read())
              f.close()
+         if opcion == 5:
+             print("Esta es toda la informacion en el archivo\n")
+             f = open("./archivos/curso.txt")
+             print(f.read())
+             f.close()
+             linea = int(input("Escribe la linea que deseas ver"))
+             f = open("./archivos/curso.txt")
+             linea = f.readline()
+             print(linea)
+             f.close()
+
+
+
+
+
+             
+             
+             
+
+
 
 
 
