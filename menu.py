@@ -146,6 +146,34 @@ while loop == True:
             add = Curso_Tema(idcurso_tema,idcurso,idtema)
             add.Agregar()
             print("Se han agregado")
+        if opcion == 2:
+            archivo = open("./archivos/curso_tema.txt")
+            print(archivo.read())
+             
+            archivo.close()
+            idcurso_tema = int(input("Elija el curso a eliminar:\n"))
+            idcurso = input("Elija el nombre del curso a eliminar:\n")
+            idtema = int(input("Elija el id del empleado a eliminar:\n"))
+            print("se ha eliminado el curso ")
+            delete = Curso_Tema(idcurso_tema,idcurso,idtema)
+            
+            delete.Eliminar
+        if opcion == 3:
+
+            f = open("./archivos/curso_tema.txt")
+            print(f.read())
+            f.close()
+            idcurso_tema = int(input("Elija el id curso_tema a modificar:\n"))
+            idcurso = int(input("Elija el id del curso a modificar:\n"))
+            idtema = int(input("Elija el id del tema a mmodificar:\n"))
+            mod = Curso(idcurso_tema,idcurso,idtema)
+            mod.Modificar
+        if opcion == 4:
+            print("Esta es toda la informacion en el archivo\n")
+            f = open("./archivos/curso_tema.txt")
+            print(f.read())
+            f.close()
+
 
 
 
