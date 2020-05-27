@@ -197,4 +197,13 @@ if accion == 4:
              nombre = input("Elija el nombre del tema a eliminar:\n")
              print("Eliminacion confirmada ")
              delete = Tema(idtema,nombre)
-             delete.Eliminar
+             delete.Eliminar  
+         
+         if opcion == 3:    
+             f = open("./archivos/tema.txt")
+             print(archivo_tema.read())
+             f.close()
+             idtema = int(input("Elija el tema a modificar:\n"))
+             nombre = input("Elija el nombre del tema a modificar:\n")
+             mod = Tema(idtema,nombre)
+             mod.Modificar
