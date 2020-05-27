@@ -34,3 +34,9 @@ class Video():
     def fecha_publicacion(self,fecha_publicacion):
         self.__fecha_publicacion = fecha_publicacion
     
+    #Apartado para los archivos
+    def Agregar(self):
+        archivo_videos = open("./archivos/videos.txt","a",encoding='utf8')
+        archivo_videos.write( str(self.idvideo) + '|' + self.__nombre + '|' + str(self.__url) + '|' + str(self.fecha_publicacion))
+        archivo_videos.write("\n")    
+        archivo_videos.close()
