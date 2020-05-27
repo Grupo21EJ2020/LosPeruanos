@@ -30,7 +30,19 @@ while loop == True:
 
              delete = Curso(idcurso,descripcion,idempleado)
              delete.Eliminar  
-         
+         if opcion == 3:
+             
+             archivo = open("./archivos/curso.txt")
+             print(archivo.read())
+             idcurso = int(input("Elija el curso a modificar"))
+             descripcion = input("Elija el nombre del curso a modificar")
+             idempleado = int(input("Elija el id del empleado a modificar"))
+             mod = Curso(idcurso,descripcion,idempleado)
+             mod.Modificar
+             
+
+
+
              
              
 

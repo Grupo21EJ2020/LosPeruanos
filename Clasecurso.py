@@ -27,11 +27,11 @@ class Curso():
         archivo.write( str(self.__idcurso) + '|' + self.__descripcion + '|' + str(self.__idempleado))
         archivo.write("\n")    
         archivo.close()
-    def Eliminar(self,idcurso):
+    def Eliminar(self):
         f = open("./archivos/curso.txt")
         Lista = []
         for line in f:
-            linea = line.split("\n")
+            linea = line.split("|")
             self.__idcurso = linea[0]
             self.__descripcion = linea[1]
             self.__idempleado = linea[2]
@@ -43,7 +43,39 @@ class Curso():
         f.write(Lista)  
         f.close()    
         
+    def Modificar(self):
+         f = open("./archivos/curso.txt")
+         
+         cam = []
+         for line in f:
+             linea = line.split("|")
+             self.__idcurso = linea[0]
+             self.__descripcion = linea[1]
+             self.__idempleado = linea[2]
+             if self.__idcurso != self.__idcurso:
+                 cam += line
+         f.close()
+         for renglon in cam:
+            datos = renglon.split("|")
+            if datos[0] == (self.__idcurso,):
+                self.__idcurso = int(input("ingrese el idcurso modificado"))
+                self.__descripcion = input("ingrese la descripcion  modicado")
+                self.__idempleado = int(input("ingrese el idempleado modificado"))
+                datosNuevos = datos[1].replace(datos[1], self.__descripcion + "|" + self.__idempleado + "\n")
+                datosCambiados = (datos[0] + "|" + datosNuevos)
+                cam.append(datosCambiados)
+         f =open("./archivos/curso.txt","w")  
+         f.write(cam)  
+         f.close()
+
+
+         
+
+         
         
+
+
+
 
 
         
