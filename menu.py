@@ -96,20 +96,20 @@ while loop == True:
 
         if opcion == 3:
              
-             f = open("./archivos/curso.txt")
+             f = open("./archivos/empleados.txt")
              print(archivo.read())
              f.close()
-             idcurso = int(input("Elija el curso a modificar:\n"))
-             descripcion = input("Elija el nombre del curso a modificar:\n")
-             idempleado = int(input("Elija el id del empleado a modificar:\n"))
-             mod = Curso(idcurso,descripcion,idempleado)
+             idempleado = int(input("Elija el idempleado a modificar:\n"))
+             nombre = input("Elija el nombre a modificar:\n")
+             direccion = (input("Elija la direccion a modificar:\n"))
+             mod = Curso(idempleado,nombre,direccion)
              mod.Modificar
 
 
 
          if opcion == 4:
              print("Esta es toda la informacion en el archivo\n")
-             f = open("./archivos/curso.txt")
+             f = open("./archivos/empleados.txt")
              print(f.read())
              f.close()
 
