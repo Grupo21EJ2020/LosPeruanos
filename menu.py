@@ -148,6 +148,11 @@ while loop == True:
             add = Video(idvideo,nombre,url,fecha_publicacion)
             add.Agregar()
             print("Se han agrgado la informacion")
+         
+        if opcion == 2:    
+            archivo_videos = open("./archivos/videos.txt")
+            print(archivo_videos.read())
+            archivo_videos.close()
 
 #---Opcion 4 del MENU (TEMA)---
     if accion == 4:
