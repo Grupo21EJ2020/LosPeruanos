@@ -177,6 +177,17 @@ while loop == True:
             f = open("./archivos/videos.txt")
             print(f.read())
             f.close()
+        
+        if opcion == 5:
+            print("Esta es toda la informacion en el archivo\n")
+            f = open("./archivos/videos.txt")
+            print(f.read())
+            f.close()
+            linea = int(input("Escribe la linea que deseas ver"))
+            f = open("./archivos/videos.txt")
+            linea = f.readline()
+            print(linea)
+            f.close()
 
 #---Opcion 4 del MENU (TEMA)---
     if accion == 4:
