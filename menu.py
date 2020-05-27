@@ -213,3 +213,14 @@ if accion == 4:
              f = open("./archivos/tema.txt")
              print(f.read())
              f.close()
+
+         if opcion == 5:
+             print("Estos son los detalles de los Temas:\n")
+             f = open("./archivos/tema.txt")
+             print(f.read())
+             f.close()
+             linea = int(input("Escribe la linea que deseas ver"))
+             f = open("./archivos/tema.txt")
+             linea = f.readline()
+             print(linea)
+             f.close()
