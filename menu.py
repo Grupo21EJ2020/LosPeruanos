@@ -26,7 +26,7 @@ while loop == True:
              idcurso = int(input("Elija el curso a eliminar:\n"))
              descripcion = input("Elija el nombre del curso a eliminar:\n")
              idempleado = int(input("Elija el id del empleado a eliminar:\n"))
-             print("se ha eliminado el curso {descripcion}")
+             print("se ha eliminado el curso ")
 
 
 

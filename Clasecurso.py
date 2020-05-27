@@ -28,21 +28,20 @@ class Curso():
         archivo.write("\n")    
         archivo.close()
     def Eliminar(self):
-        f = open("./archivos/curso.txt")
-        Lista = []
-        for line in f:
-            linea = line.split("|")
-            self.__idcurso = linea[0]
-            self.__descripcion = linea[1]
-            self.__idempleado = linea[2]
-            if self.__idcurso != self.__idcurso:
-                Lista += line
-        f.close()
+        archivo = open("./archivos/curso.txt","r",encoding ='utf8')
 
-        f =open("./archivos/curso.txt","w")  
-        f.write(Lista)  
-        f.close()    
-        
+        lista = []
+        for x in archivo:
+            datos = x.split("\n")
+            if datos[0] != (self.__idcurso + "|" + self.__descripcion + "|" + self.__idempleado):
+                lista.append(datos[0])
+                archivo2 = open("./archivos/curso.txt","w",encoding = "utf8")
+                for i in lista:
+                    archivo2.write(i + "\n")
+                    archivo2.close()
+        archivo.close()
+
+      
     def Modificar(self):
          f = open("./archivos/curso.txt")
          

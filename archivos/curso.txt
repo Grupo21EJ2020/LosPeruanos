@@ -1,3 +1,0 @@
-1|Programacion Avanzada|1
-2|Base de datos |2
-12|simon|56
