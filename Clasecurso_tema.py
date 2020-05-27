@@ -39,7 +39,32 @@ class Curso_Tema():
                 for i in lista:
                     archivo2.write(i + "\n")
                     archivo2.close()
-        archivo.close()               
+        archivo.close()
+    def Modificar(self):
+         f = open("./archivos/curso_tema.txt")
+         
+         cam = []
+         for line in f:
+             linea = line.split("|")
+             self.__idcurso_tema = linea[0]
+             self.__idcurso = linea[1]
+             self.__idtema = linea[2]
+             if self.__idcurso_tema != self.__idcurso_tema:
+                 cam += line
+         f.close()
+         for renglon in cam:
+            datos = renglon.split("|")
+            if datos[0] == (self.__idcurso_tema,):
+                self.__idcurso_tema = int(input("ingrese el idcurso_tema modificado"))
+                self.__idcurso = input("ingrese el idcurso  modificado")
+                self.__idtema = int(input("ingrese el idtema modificado"))
+                datosNuevos = datos[1].replace(datos[1], self.__descripcion + "|" + self.__idempleado + "\n")
+                datosCambiados = (datos[0] + "|" + datosNuevos)
+                cam.append(datosCambiados)
+         f =open("./archivos/curso_tema.txt","w")  
+         f.write(cam)
+         cam.remove()  
+         f.close()                   
 
 
 
