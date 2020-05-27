@@ -3,3 +3,9 @@ class Tema:
         self.__idtema = idtema
         self.__nombre = nombre
     
+    @property
+    def idtema(self):
+        return self.__idtema 
+    @property
+    def nombre(self):
+        return self.__nombre
