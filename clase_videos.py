@@ -54,3 +54,30 @@ class Video():
                     archivo_videos_2.write(i + "\n")
                     archivo_videos_2.close()
         archivo_videos.close()
+
+    def Modificar(self):
+         f = open("./archivos/videos.txt")
+         
+         cam = []
+         for line in f:
+             linea = line.split("|")
+             self.__idvideo = linea[0]
+             self.__nombre = linea[1]
+             self.__url = linea[2]
+             self.__fecha_publicacion = linea[3]
+             if self.__idvideo != self.__idvideo:
+                 cam += line
+         f.close()
+         for renglon in cam:
+            datos = renglon.split("|")
+            if datos[0] == (self.__idvideo,):
+                self.__idvideo = int(input("ingrese el idvideo modificado"))
+                self.__nombre = input("ingrese el nombre modicado")
+                self.__url = input("ingrese el url modificado")
+                self.__fecha_publicacion = input("ingrese la fecha del video modificado")
+                datosNuevos = datos[1].replace(datos[1], self.__nombre + "|" + self.__url + "|" + self.__fecha_publicacion + "\n")
+                datosCambiados = (datos[0] + "|" + datosNuevos)
+                cam.append(datosCambiados)
+         f =open("./archivos/videos.txt","w")  
+         f.write(cam)  
+         f.close()
