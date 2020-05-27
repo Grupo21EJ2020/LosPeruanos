@@ -21,16 +21,35 @@ while loop == True:
              print(archivo.read())
              
              archivo.close()
-             idcurso = int(input("Elija el curso a eliminar"))
-             descripcion = input("Elija el nombre del curso a eliminar")
-             idempleado = int(input("Elija el id del empleado a eliminar"))
+             idcurso = int(input("Elija el curso a eliminar:\n"))
+             descripcion = input("Elija el nombre del curso a eliminar:\n")
+             idempleado = int(input("Elija el id del empleado a eliminar:\n"))
              print("se ha eliminado el curso {descripcion}")
 
 
 
              delete = Curso(idcurso,descripcion,idempleado)
              delete.Eliminar  
-         
+         if opcion == 3:
+             
+             f = open("./archivos/curso.txt")
+             print(archivo.read())
+             f.close()
+             idcurso = int(input("Elija el curso a modificar:\n"))
+             descripcion = input("Elija el nombre del curso a modificar:\n")
+             idempleado = int(input("Elija el id del empleado a modificar:\n"))
+             mod = Curso(idcurso,descripcion,idempleado)
+             mod.Modificar
+         if opcion == 4:
+             print("Esta es toda la informacion en el archivo\n")
+             f = open("./archivos/curso.txt")
+             print(f.read())
+             f.close()
+
+
+
+
+
              
              
 
