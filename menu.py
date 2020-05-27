@@ -150,5 +150,12 @@ while loop == True:
 
 
 
-
-
+#---Opcion de MENU para el apartado de Tema---
+if accion == 4:
+         opcion = int(input("Dime que deseas hacer en este archivo:\n Agregar= 1:\n Borrar=2:\n Modificar=3:\n Consultar todo=4:\n Ver detalles de algun curso=5:\n"))
+         if opcion == 1:
+             idtema = int(input("id del tema: \n"))  
+             nombre = input("nombre del tema: \n")   
+             add = Tema(idtema,nombre)
+             add.Agregar()
+             print("Se han agregado")
