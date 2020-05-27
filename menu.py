@@ -60,7 +60,7 @@ while loop == True:
 
 
 
-             
+#EMPLEADOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOS
     if accion == 2:
         opcion = int(input("Dime que deseas hacer en este archivo:\n Agregar= 1:\n Borrar=2:\n Modificar=3:\n Consultar todo=4:\n Ver detalles de algun empleado=5:\n"))
         if opcion == 1:
@@ -82,10 +82,50 @@ while loop == True:
         if opcion ==2:
             #BORRAR DATOS DE EMPLEADOS UWU
             listaborrado=[]
-            borrado=input("Dime que dato deseas borrar de este archivo: \n")
+            listamuestra=[]
             archivoread= open("./archivos/empleados.txt",encoding='utf8')
             print(archivoread.read())
+            for dato in archivoread:
+                listamuestra.append()
+            print(listamuestra)
+            borrado=input("Dime que dato deseas borrar de este archivo: \n")
+            if x in listamuestra:
+                listaborrado.append()  
             archivoread.close()
+
+
+        if opcion == 3:
+             
+             f = open("./archivos/curso.txt")
+             print(archivo.read())
+             f.close()
+             idcurso = int(input("Elija el curso a modificar:\n"))
+             descripcion = input("Elija el nombre del curso a modificar:\n")
+             idempleado = int(input("Elija el id del empleado a modificar:\n"))
+             mod = Curso(idcurso,descripcion,idempleado)
+             mod.Modificar
+
+
+
+         if opcion == 4:
+             print("Esta es toda la informacion en el archivo\n")
+             f = open("./archivos/curso.txt")
+             print(f.read())
+             f.close()
+
+
+
+         if opcion == 5:
+             print("Esta es toda la informacion en el archivo\n")
+             f = open("./archivos/curso.txt")
+             print(f.read())
+             f.close()
+             linea = int(input("Escribe la linea que deseas ver"))
+             f = open("./archivos/curso.txt")
+             linea = f.readline()
+             print(linea)
+             f.close()
+
         
 
 
