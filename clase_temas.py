@@ -21,7 +21,7 @@ class Tema():
     #Apartado para los archivos
     def Agregar(self):
         archivo_tema = open("./archivos/tema.txt","a",encoding='utf8')
-        archivo_tema.write( str(self.__idcurso) + '|' + self.__descripcion + '|' + str(self.__idempleado))
+        archivo_tema.write( str(self.__idtema) + '|' + self.__nombre)
         archivo_tema.write("\n")    
         archivo_tema.close()
     
