@@ -2,6 +2,9 @@
 from Clasecurso import Curso
 from Claseempleado import empleado
 from Clasecurso_tema import Curso_Tema
+from clase_temas import Tema
+from clase_videos import Video
+
 print("»"*60)
 
 loop= True
