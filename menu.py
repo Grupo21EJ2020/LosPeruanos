@@ -108,8 +108,8 @@ while loop == True:
 
 
          if opcion == 4:
-             
-             print("Esta es toda la informacion en el archivo\n")
+
+             print("Esta es toda la informacion en el archivo de empleados\n")
              f = open("./archivos/empleados.txt")
              print(f.read())
              f.close()
@@ -117,12 +117,12 @@ while loop == True:
 
 
          if opcion == 5:
-             print("Esta es toda la informacion en el archivo\n")
-             f = open("./archivos/curso.txt")
+             print("Esta es toda la informacion en el archivo de empleados\n")
+             f = open("./archivos/empleados.txt")
              print(f.read())
              f.close()
              linea = int(input("Escribe la linea que deseas ver"))
-             f = open("./archivos/curso.txt")
+             f = open("./archivos/empleados.txt")
              linea = f.readline()
              print(linea)
              f.close()
