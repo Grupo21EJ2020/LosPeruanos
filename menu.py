@@ -154,6 +154,14 @@ while loop == True:
             print(archivo_videos.read())
             archivo_videos.close()
 
+            idvideo = int(input("Elija el video a eliminar:\n"))
+            nombre = input("Elija el nombre del video a eliminar:\n")
+            url = int(input("¿Cual es el url a eliminar?:\n"))
+            fecha_publicacion = input("¿Cual es la fecha que quiere eliminar?")
+            print("se ha eliminado el video ")
+            delete = Video(idvideo,nombre,url,fecha_publicacion)
+            delete.Eliminar
+
 #---Opcion 4 del MENU (TEMA)---
     if accion == 4:
         opcion = int(input("Dime que deseas hacer en este archivo:\n Agregar= 1:\n Borrar=2:\n Modificar=3:\n Consultar todo=4:\n Ver detalles de algun tema =5:\n"))
