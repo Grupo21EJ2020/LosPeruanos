@@ -1,14 +1,14 @@
 class Curso_Tema():
     def __init__(self,idcurso_tema,idcurso,idtema):
-        self.idcurso_tema = idcurso_tema
+        self.__idcurso_tema = idcurso_tema
         self.__idcurso = idcurso
         self.__idtema = idtema
     @property
     def idcurso_tema(self):
         return self.__idcurso_tema
     @property 
-    def idcurso_tema(self):
-        return self.__idcurso_tema
+    def idcurso(self):
+        return self.__idcurso
     @property 
     def idtema(self):
         return self.__idtema
@@ -21,7 +21,12 @@ class Curso_Tema():
     @idtema.setter
     def idtema(self):
         self.__idtema = valor
-                
+
+    def Agregar(self):
+        archivo = open("./archivos/curso_tema.txt","a",encoding='utf8')
+        archivo.write( str(self.__idcurso_tema) + '|' + str(self.__idcurso) + '|' + str(self.__idtema))
+        archivo.write("\n")    
+        archivo.close()            
 
 
 

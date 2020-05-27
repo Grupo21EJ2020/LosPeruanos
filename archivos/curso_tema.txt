@@ -1,1 +1,1 @@
-idCursoTema!idCurso!idtema
+3|2|1

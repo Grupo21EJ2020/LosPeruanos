@@ -1,7 +1,7 @@
 #Menu Chido para el pia osi osi 
 from Clasecurso import Curso
 from Claseempleado import empleado
-
+from Clasecurso_tema import Curso_Tema
 print("»"*60)
 
 loop= True
@@ -132,3 +132,20 @@ while loop == True:
 
         if opcion == 6:
             pass
+
+
+    if accion == 5:
+        opcion = int(input("Dime que deseas hacer en este archivo:\n Agregar= 1:\n Borrar=2:\n Modificar=3:\n Consultar todo=4:\n Ver detalles de algun curso=5:\n"))
+        if opcion == 1:
+            idcurso_tema = int(input("id de curso_tema: \n"))  
+            idcurso = int(input("id del curso: \n"))   
+            idtema = int(input("Id del tema: \n"))
+            add = Curso_Tema(idcurso_tema,idcurso,idtema)
+            add.Agregar()
+            print("Se han agregado")
+
+
+
+
+
+
